@@ -197,3 +197,8 @@ function unquarantine() {
 		xattr -r -d "$attribute" "$@"
 	done
 }
+
+# Path helper, used for alias shortcuts
+function cdpath() {
+	cd $1/$2
+}

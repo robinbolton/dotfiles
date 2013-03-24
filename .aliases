@@ -1,16 +1,16 @@
 # Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
+alias ..="cdpath .. $1"
+alias ...="cdpath ../.. $1"
+alias ....="cdpath ../../.. $1"
+alias .....="cdpath ../../../.. $1"
+alias ~="cdpath ~ $1" # `cd` is probably faster to type though
+alias -- -="cdpath - $1"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
+alias d="cdpath ~/Documents/Dropbox $1"
+alias dl="cdpath ~/Downloads $1"
+alias dt="cdpath ~/Desktop $1"
+alias p="cdpath ~/Projects $1"
 alias g="git"
 alias h="history"
 alias j="jobs"
